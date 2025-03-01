@@ -2,7 +2,7 @@
 
 ## Description
 
-**VisualArray** is a Ruby gem that displays arrays in a structured, visually appealing tabular format. It supports **1D, 2D, and multi-dimensional arrays** with options for customizing text **color** and **size**.
+**VisualArray** is a Ruby gem that displays arrays in a structured, visually appealing tabular format. It supports **1D, 2D, and multi-dimensional arrays** with options for customizing text **color**.
 
 ## Installation
 
@@ -73,15 +73,14 @@ Dimension 1, Index 1:
 +-----+-----+
 ```
 
-### Customizing Color & Text Size
+### Customizing Color
 
-You can pass optional `color` and `size` parameters:
+You can pass optional `color` parameter:
 
 ```ruby
 VisualArray.display(
   [[[1, 2], [3, 4]], [[5, 6], [7, 8]]],
-  color: 'blue',
-  size: 10
+  color: 'blue'
 )
 ```
 
