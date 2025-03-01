@@ -1,5 +1,8 @@
-# VisualArray
+## RubyGems
 
+The gem is available here [VisualArrayGem](https://rubygems.org/gems/visual_array)
+
+# VisualArray
 ## Description
 
 **VisualArray** is a Ruby gem that displays arrays in a structured, visually appealing tabular format. It supports **1D, 2D, and multi-dimensional arrays** with options for customizing text **color**.
@@ -109,7 +112,7 @@ To release a new version:
 bundle exec rake release
 ```
 
-This will create a git tag, push commits, and publish the gem to [RubyGems](https://rubygems.org).
+This will create a git tag, push commits, and publish the gem to [RubyGems](https://rubygems.org/gems/visual_array).
 
 ## Contributing
 
@@ -118,4 +121,3 @@ Bug reports and pull requests are welcome at [GitHub](https://github.com/chandu8
 ## License
 
 This project is available under the [MIT License](LICENSE.txt).
-
