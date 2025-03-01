@@ -11,3 +11,5 @@ gem "rake", "~> 13.0"
 gem "terminal-table", "~> 4.0"
 
 gem "rainbow", "~> 3.1"
+
+gem "rspec", "~> 3.13"
