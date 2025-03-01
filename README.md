@@ -1,35 +1,122 @@
 # VisualArray
 
-TODO: Delete this and the text below, and describe your gem
+## Description
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/visual_array`. To experiment with that code, run `bin/console` for an interactive prompt.
+**VisualArray** is a Ruby gem that displays arrays in a structured, visually appealing tabular format. It supports **1D, 2D, and multi-dimensional arrays** with options for customizing text **color** and **size**.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
+Add this line to your application's Gemfile:
 
 ```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+bundle add visual_array
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+Or install it manually:
 
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+gem install visual_array
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+### Basic Example
+
+```ruby
+require 'visual_array'
+
+VisualArray.display([1, 2, 3, 4])
+```
+
+**Output:**
+```
++---+---+---+---+
+| 1 | 2 | 3 | 4 |
++---+---+---+---+
+```
+
+### 2D Array Example
+
+```ruby
+VisualArray.display([
+  [1, 2],
+  [3, 4]
+])
+```
+
+**Output:**
+```
++-----+-----+
+|  1  |  2  |
+|  3  |  4  |
++-----+-----+
+```
+
+### Multi-Dimensional Array Example
+
+```ruby
+VisualArray.display([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+```
+
+**Output:**
+```
+Dimension 1, Index 0:
++-----+-----+
+|  1  |  2  |
+|  3  |  4  |
++-----+-----+
+
+Dimension 1, Index 1:
++-----+-----+
+|  5  |  6  |
+|  7  |  8  |
++-----+-----+
+```
+
+### Customizing Color & Text Size
+
+You can pass optional `color` and `size` parameters:
+
+```ruby
+VisualArray.display(
+  [[[1, 2], [3, 4]], [[5, 6], [7, 8]]],
+  color: 'blue',
+  size: 10
+)
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```bash
+bin/setup
+```
+
+to install dependencies. Use `bin/console` for an interactive session.
+
+To install this gem locally:
+
+```bash
+bundle exec rake install
+```
+
+To release a new version:
+
+1. Update the version in `version.rb`.
+2. Run:
+
+```bash
+bundle exec rake release
+```
+
+This will create a git tag, push commits, and publish the gem to [RubyGems](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/visual_array.
+Bug reports and pull requests are welcome at [GitHub](https://github.com/chandu89/visual_array).
+
+## License
+
+This project is available under the [MIT License](LICENSE.txt).
+
