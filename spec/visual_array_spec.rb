@@ -37,7 +37,7 @@ describe VisualArray do
       it "displays a table with row and column indices" do
         array = [[1, 2], [3, 4]]
         output = capture_stdout { VisualArray.display(array) }
-        expect(strip_ansi_codes(output)).to match(/\|\s+\|\s+Col 0\s+\|\s+Col 1\s+\|/)
+        expect(strip_ansi_codes(output)).to match(/\|\s+\|\s+Col 0\s+\|\s+Col 1\s+\|/)  
       end
     end
 
