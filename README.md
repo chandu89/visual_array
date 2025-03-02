@@ -183,6 +183,7 @@ VisualArray.display(
 ## Visual Representation  
 
 <img width="952" alt="image" src="https://github.com/user-attachments/assets/d9f143af-4dd5-4908-abc0-58385ec4e873" />
+<img width="942" alt="image" src="https://github.com/user-attachments/assets/14c0ba5c-412f-48bc-81e2-ad4cfdba349f" />
 
 
 ## Contributing  
