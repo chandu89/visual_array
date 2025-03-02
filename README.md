@@ -86,6 +86,8 @@ VisualArray.display(
   color: 'blue'
 )
 ```
+## Visual Representation
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/d9f143af-4dd5-4908-abc0-58385ec4e873" />
 
 ## Development
 
