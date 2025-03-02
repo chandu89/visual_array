@@ -1,13 +1,18 @@
 require 'terminal-table'
 require 'rainbow'
+require_relative 'operation'
 
 module VisualArray
   class Error < StandardError; end
 
   class << self
-    def display(array, color: "green")
+    include Operation
+    DEFAULT_COLOR = "green".freeze
+
+    def display(array, color: DEFAULT_COLOR)
       raise Error, "Input must be an array" unless array.is_a?(Array)
 
+      color ||= DEFAULT_COLOR 
       dimensions = array_dimensions(array)
 
       case dimensions
@@ -18,6 +23,31 @@ module VisualArray
       else
         display_multi_d(array, color)
       end
+    end
+
+    def multiply_and_display(matrix1, matrix2, color: DEFAULT_COLOR)
+      result_display = matrix_multiply(matrix1, matrix2)
+
+      puts Rainbow("\nMatrix Multiplication Result:\n").magenta.bright
+      display(result_display, color: color)
+    end
+
+    def add_and_display(matrix1, matrix2, color: DEFAULT_COLOR)
+      result_display = matrix_add(matrix1, matrix2)
+      puts Rainbow("\nMatrix Addition Result:\n").blue.bright
+      display(result_display, color: color)
+    end
+
+    def subtract_and_display(matrix1, matrix2, color: DEFAULT_COLOR)
+      result_display = matrix_subtract(matrix1, matrix2)
+      puts Rainbow("\nMatrix Subtraction Result:\n").red.bright
+      display(result_display, color: color)
+    end
+  
+    def divide_and_display(matrix1, matrix2, color: DEFAULT_COLOR)
+      result_display = matrix_divide(matrix1, matrix2)
+      puts Rainbow("\nMatrix Division Result:\n").yellow.bright
+      display(result_display, color: color)
     end
 
     private
